@@ -1,0 +1,90 @@
+@use '../abstracts/mixins' as *;
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  background: var(--surface);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+  }
+}
+
+.card__link {
+  display: block;
+}
+
+.card__image {
+  aspect-ratio: 1 / 0.8;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.tag-ship {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  background: var(--purple);
+  color: white;
+  padding: 10px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--yellow);
+  padding: 10px 14px;
+  border-radius: 0 0 60px 0;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.card__body {
+  padding: 18px 0 10px;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  min-height: 48px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.price-old,
+.installment {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+@include tablet {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mobile {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}

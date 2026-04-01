@@ -1,0 +1,86 @@
+@use '../abstracts/mixins' as *;
+
+.desktop-mega-menu {
+  flex: 1;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.desktop-mega-menu__list {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.desktop-mega-menu__item {
+  position: relative;
+}
+
+.desktop-mega-menu__trigger {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.desktop-mega-menu__panel {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px);
+  transform: translateX(-50%);
+  min-width: 420px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.22s ease;
+}
+
+.desktop-mega-menu__panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.desktop-mega-menu__panel-content {
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.desktop-mega-menu__eyebrow {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  font-size: 0.82rem;
+}
+
+.desktop-mega-menu__description {
+  margin: 0;
+  color: var(--muted);
+}
+
+.desktop-mega-menu__links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  a {
+    display: block;
+    padding: 10px 12px;
+    background: #fafafa;
+    transition: background 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: #f0ebfe;
+      outline: none;
+    }
+  }
+}
