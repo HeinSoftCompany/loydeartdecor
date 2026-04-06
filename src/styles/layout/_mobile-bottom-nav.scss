@@ -3,7 +3,7 @@
 .mobile-bottom-nav {
   display: none;
 
-  @include tablet {
+  @include mobile {
     position: fixed;
     left: 0;
     right: 0;
@@ -25,6 +25,7 @@
   place-items: center;
   gap: 4px;
   color: #565656;
+  padding: 6px 4px;
 }
 
 .mobile-bottom-nav__item.is-active {
@@ -32,10 +33,12 @@
 }
 
 .mobile-bottom-nav__icon {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .mobile-bottom-nav__label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
 }

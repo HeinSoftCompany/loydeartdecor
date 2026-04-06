@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .container {
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
@@ -8,7 +10,7 @@
 }
 
 .site-main {
-  padding-bottom: calc(var(--bottom-nav-height) + 16px);
+  padding-bottom: 0;
 }
 
 .top-strip {
@@ -76,4 +78,19 @@
 .overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+}
+
+@include mobile {
+  .site-main {
+    padding-bottom: calc(var(--bottom-nav-height) + 16px);
+  }
+
+  .section,
+  .page-section {
+    padding: 32px 0;
+  }
+
+  .page-hero {
+    padding: 12px 0 24px;
+  }
 }

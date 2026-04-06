@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .subcategory-links {
   display: flex;
   gap: 12px;
@@ -23,11 +25,19 @@
   object-fit: cover;
 }
 
+.product-gallery__main img {
+  aspect-ratio: 1 / 0.9;
+}
+
 .product-gallery__thumbs {
   margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+}
+
+.product-gallery__thumbs img {
+  aspect-ratio: 1 / 0.9;
 }
 
 .product-page__content {
@@ -59,8 +69,28 @@
   padding-left: 20px;
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .product-page {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@include mobile {
+  .subcategory-links {
+    gap: 10px;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .product-gallery__thumbs {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .product-page__price {
+    font-size: 1.7rem;
   }
 }

@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <div className="site-shell">
-      <Header navData={navigationGroups} onOpenMobileSheet={openMobileSheet} />
+      <Header navData={navigationGroups} />
 
       <main className="site-main">
         <Outlet />

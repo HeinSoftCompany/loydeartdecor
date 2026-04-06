@@ -34,7 +34,7 @@ export default function HomePage() {
       <div className="ticker">
         <div className="ticker__track">
           {Array.from({ length: 10 }).map((_, index) => (
-            <span key={index}>DIVIDIMOS EM ATÉ 12X S/JUROS /</span>
+            <span key={index}>DIVIDIMOS EM ATÉ 12X S/JUROS</span>
           ))}
         </div>
       </div>
