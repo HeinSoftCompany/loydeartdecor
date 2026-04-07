@@ -10,7 +10,7 @@ export default function CheckoutButton({ href }) {
   }
 
   return (
-    <a className="btn" href={href} rel="noopener noreferrer" target="_blank">
+    <a className="btn" href={href} rel="noopener noreferrer" target="_self">
       Comprar agora
     </a>
   );

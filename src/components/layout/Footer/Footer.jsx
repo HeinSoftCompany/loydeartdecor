@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container/Container.jsx';
+import { navigationGroups } from '../../../data/navigation.js';
 
 export default function Footer() {
   return (
@@ -8,11 +10,12 @@ export default function Footer() {
           <h4>Departamentos</h4>
           <ul>
             <li>Últimos artigos em estoque!</li>
-            <li>Arte em Barro</li>
-            <li>Cozinha</li>
-            <li>Decoração</li>
-            <li>Mesa Posta</li>
-            <li>Tecidos</li>
+
+            {navigationGroups.map((group) => (
+              <li key={group.id}>
+                <Link to={`/${group.slug}`}>{group.label}</Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -29,11 +32,11 @@ export default function Footer() {
         <div>
           <h4>Entre em contato</h4>
           <ul>
-            <li>contato@loydeart.com.br</li>
-            <li>Recife • Pernambuco</li>
+            <li>loydeartdecor@gmail.com</li>
+            <li>Gravatá • Pernambuco</li>
           </ul>
           <div className="socials">
-            <a href="#" aria-label="Instagram">IG</a>
+            <a href="https://www.instagram.com/loydeart_decor/" aria-label="Instagram">IG</a>
             <a href="#" aria-label="Facebook">f</a>
             <a href="#" aria-label="YouTube">▶</a>
             <a href="#" aria-label="TikTok">♪</a>
@@ -47,7 +50,9 @@ export default function Footer() {
           <h4>Meios de pagamento</h4>
           <div className="footer__icons-wrap">
             {['VISA', 'MC', 'ELO', 'AMEX', 'PIX', 'BOL', 'DISC', 'HIPER'].map((item) => (
-              <div className="pay-chip" key={item}>{item}</div>
+              <div className="pay-chip" key={item}>
+                {item}
+              </div>
             ))}
           </div>
         </div>
@@ -62,8 +67,11 @@ export default function Footer() {
       </Container>
 
       <Container className="footer__bottom">
-        <div>Copyright Loyde Art &amp; Decoração · 2026. Todos os direitos reservados.</div>
-        <div className="brand-credit"><span>Desenvolvido por</span><strong>HeinSoft Company</strong></div>
+        <div>Copyright Loyde Art & Decoração · 2026 · Todos os direitos reservados.</div>
+        <div className="brand-credit">
+          <span>Desenvolvido por</span>
+          <strong>HeinSoft Company</strong>
+        </div>
       </Container>
     </footer>
   );
