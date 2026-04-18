@@ -48,7 +48,7 @@ export default function HomePage() {
             <div className="promo-box">
               <div className="promo-box__content">
                 <small>Todo o mês</small>
-                <strong>2x1 / 3x2</strong>
+                <strong>Produtos temáticos</strong>
                 <span>em selecionados</span>
                 <div style={{ fontSize: '2rem', marginTop: '6px' }}>→</div>
               </div>
