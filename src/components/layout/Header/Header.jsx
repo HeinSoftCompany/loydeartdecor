@@ -61,15 +61,8 @@ export default function Header({ navData }) {
           <button className="icon-btn" aria-label="Minha conta" type="button">
             <UserIcon />
           </button>
-
-          <button className="icon-btn icon-btn--cart" aria-label="Carrinho" type="button">
-            <CartIcon />
-            <span className="cart-count">0</span>
-          </button>
         </div>
       </Container>
-
-      <div className="promo-bar">FRETE GRÁTIS À PARTIR DE R$ 500</div>
     </header>
   );
 }

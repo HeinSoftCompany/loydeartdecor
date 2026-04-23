@@ -3,7 +3,6 @@ import Container from '../../components/ui/Container/Container.jsx';
 import Button from '../../components/ui/Button/Button.jsx';
 import SectionTitle from '../../components/ui/SectionTitle/SectionTitle.jsx';
 import ProductGrid from '../../components/product/ProductGrid/ProductGrid.jsx';
-import { navigationGroups } from '../../data/navigation.js';
 import { getFeaturedProducts, getOfferProducts } from '../../data/products.js';
 import { useReveal } from '../../hooks/useReveal.js';
 
@@ -65,22 +64,6 @@ export default function HomePage() {
               <div className="promo-box__icon">%</div>
             </div>
           </div>
-        </Container>
-      </section>
-
-      <section className="section">
-        <Container className="category-grid reveal" ref={groupsRef}>
-          {navigationGroups.map((group) => (
-            <article className="category-card" key={group.id}>
-              <div className="category-card__image category-card__image--placeholder" />
-              <div className="category-card__body">
-                <h3>{group.label}</h3>
-                <Button className="btn--yellow" to={`/${group.slug}`}>
-                  Ver mais
-                </Button>
-              </div>
-            </article>
-          ))}
         </Container>
       </section>
 

@@ -14,10 +14,10 @@ export default function GroupPage() {
   const groupProducts = getProductsByGroup(group.slug);
 
   return (
-    <section className="page-section">
+    <section className="page-section catalog-page">
       <Container>
-        <div className="page-hero">
-          <p className="page-hero__eyebrow">Grupo principal</p>
+        <div className="catalog-hero">
+          <p className="catalog-hero__eyebrow">Categoria</p>
           <h1>{group.label}</h1>
           <p>{group.description}</p>
         </div>
@@ -30,7 +30,11 @@ export default function GroupPage() {
           ))}
         </div>
 
-        <SectionTitle>Produtos em {group.label}</SectionTitle>
+        <div className="catalog-toolbar">
+          <SectionTitle>{group.label}</SectionTitle>
+          <div className="catalog-toolbar__meta">{groupProducts.length} produtos</div>
+        </div>
+
         <ProductGrid products={groupProducts} />
       </Container>
     </section>

@@ -1,4 +1,4 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useParams, Link } from 'react-router-dom';
 import Container from '../../components/ui/Container/Container.jsx';
 import SectionTitle from '../../components/ui/SectionTitle/SectionTitle.jsx';
 import ProductGrid from '../../components/product/ProductGrid/ProductGrid.jsx';
@@ -15,17 +15,21 @@ export default function SubcategoryPage() {
   const products = getProductsBySubcategory(group.slug, subcategory.slug);
 
   return (
-    <section className="page-section">
+    <section className="page-section catalog-page">
       <Container>
-        <div className="page-hero">
-          <p className="page-hero__eyebrow">Subcategoria</p>
+        <div className="catalog-hero">
+          <p className="catalog-hero__eyebrow">Subcategoria</p>
           <h1>{subcategory.label}</h1>
           <p>
-            Você está em <strong>{group.label}</strong> / {subcategory.label}
+            <Link to={`/${group.slug}`}>{group.label}</Link> / <strong>{subcategory.label}</strong>
           </p>
         </div>
 
-        <SectionTitle>{subcategory.label}</SectionTitle>
+        <div className="catalog-toolbar">
+          <SectionTitle>{subcategory.label}</SectionTitle>
+          <div className="catalog-toolbar__meta">{products.length} produtos</div>
+        </div>
+
         <ProductGrid products={products} />
       </Container>
     </section>

@@ -6,6 +6,16 @@
   border-top: 1px solid #e6e6e6;
 }
 
+.footer h4 {
+  margin: 0 0 28px;
+  font-size: 1.15rem;
+}
+
+.footer ul {
+  display: grid;
+  gap: 8px;
+}
+
 .footer__top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

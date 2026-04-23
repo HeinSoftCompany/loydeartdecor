@@ -36,9 +36,12 @@ export default function DesktopMegaMenu({ groups }) {
                 onMouseLeave={() => setActiveGroupSlug(null)}
               >
                 <div className="desktop-mega-menu__panel-content">
-                  <div>
+                  <div className="desktop-mega-menu__intro">
                     <p className="desktop-mega-menu__eyebrow">{group.label}</p>
                     <p className="desktop-mega-menu__description">{group.description}</p>
+                    <Link className="desktop-mega-menu__all-link" to={`/${group.slug}`}>
+                      Ver tudo →
+                    </Link>
                   </div>
 
                   <ul className="desktop-mega-menu__links">
