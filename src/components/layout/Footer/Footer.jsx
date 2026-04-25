@@ -84,7 +84,6 @@ export default function Footer() {
         <div>
           <h4>Departamentos</h4>
           <ul>
-            <li>Últimos artigos em estoque!</li>
 
             {navigationGroups.map((group) => (
               <li key={group.id}>

@@ -43,7 +43,7 @@ export const products = [
     description: 'Peça de apoio para bandejas, aparadores e composição de mesas de centro.',
     priceCents: 9900,
     installments: { count: 6, valueCents: 1650 },
-    badges: [],
+    badges: ['frete-gratis'],
     images: [{ src: placeholder('photo-1577083165633-14ebcdb0f658'), alt: 'Colar decorativo sobre mesa' }],
     yampiLink: 'https://checkout.exemplo-yampi.com.br/produto/colar-decorativo-em-ceramica',
   },

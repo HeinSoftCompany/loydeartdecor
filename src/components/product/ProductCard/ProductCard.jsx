@@ -42,7 +42,7 @@ export default function ProductCard({ product }) {
           ) : null}
 
           <div className="installment">
-            12 x de {formatCurrencyFromCents(product.installments.valueCents)}
+            10 x de {formatCurrencyFromCents(product.installments.valueCents)}
           </div>
         </div>
       </Link>

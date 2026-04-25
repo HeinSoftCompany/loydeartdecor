@@ -18,18 +18,18 @@ export default function ProductPage() {
           <ProductGallery images={product.images} title={product.title} />
 
           <div className="product-page__content">
-            <p className="page-hero__eyebrow">Produto</p>
             <h1>{product.title}</h1>
             <p className="product-page__description">{product.description}</p>
 
-            <div className="product-page__price">{formatCurrencyFromCents(product.priceCents)}</div>
 
             {product.oldPriceCents ? (
               <div className="product-page__old-price">
-                De {formatCurrencyFromCents(product.oldPriceCents)} por hoje
+                De {formatCurrencyFromCents(product.oldPriceCents)} por:
               </div>
             ) : null}
 
+            <div className="product-page__price">{formatCurrencyFromCents(product.priceCents)}</div>
+            
             <div className="product-page__installments">
               Em até {product.installments.count}x de{' '}
               {formatCurrencyFromCents(product.installments.valueCents)} sem juros.
