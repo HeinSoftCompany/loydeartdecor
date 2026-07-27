@@ -305,7 +305,7 @@ export const products = [
     badges: [],
     images: [
       {
-        src: placeholder("photo-1464306076886-da185f6a9d05"),
+        src: "/public/images/mesa-posta/prato-decorativo-off-white.png",
         alt: "Prato elegante sobre mesa posta",
       },
     ],
