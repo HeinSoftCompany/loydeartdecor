@@ -16,7 +16,7 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "/public/images/arte-em-barro/andorinhas/andorinhas.png",
+        src: "/images/arte-em-barro/andorinhas/andorinhas.png",
         alt: "Andorinhas decorativas artesanais em barro",
       },
     ],
@@ -36,11 +36,11 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "/public/images/arte-em-barro/barro/colar-em-barro-branco.png",
+        src: "images/images/arte-em-barro/barro/colar-em-barro-branco.png",
         alt: "Colar decorativo artesanal em barro branco",
       },
       {
-        src: "/public/images/arte-em-barro/barro/colar-em-barro-sortido.png",
+        src: "/images/arte-em-barro/barro/colar-em-barro-sortido.png",
         alt: "Colar decorativo artesanal em barro sortido",
       },
     ],
@@ -60,15 +60,15 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "/public/images/arte-em-barro/casinha/casinha-arte-em-barro.png",
+        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro.png",
         alt: "Casinha decorativa artesanal em barro",
       },
       {
-        src: "/public/images/arte-em-barro/casinha/casinha-arte-em-barro-1.png",
+        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro-1.png",
         alt: "Casinha artesanal em barro vista em outro ângulo",
       },
       {
-        src: "/public/images/arte-em-barro/casinha/casinha-arte-em-barro-2.png",
+        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro-2.png",
         alt: "Detalhes da casinha decorativa artesanal em barro",
       },
     ],
@@ -88,7 +88,7 @@ export const products = [
     badges: ["novo"],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/cruz/colar-em-barro-cruz.png",
+        src: "/images/arte-em-barro/colares/cruz/colar-em-barro-cruz.png",
         alt: "Colar decorativo artesanal em barro com cruz",
       },
     ],
@@ -108,11 +108,11 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino.png",
+        src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino.png",
         alt: "Colar artesanal em barro com representação do Divino",
       },
       {
-        src: "/public/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino-sortido.png",
+        src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino-sortido.png",
         alt: "Colar artesanal em barro Divino em cores sortidas",
       },
     ],
@@ -132,11 +132,11 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/folha/colar-em-barro-folha-branca.png",
+        src: "/images/arte-em-barro/colares/folha/colar-em-barro-folha-branca.png",
         alt: "Colar artesanal em barro com folha branca",
       },
       {
-        src: "/public/images/arte-em-barro/colares/folha/colar-em-barro-folha-sortida.png",
+        src: "/images/arte-em-barro/colares/folha/colar-em-barro-folha-sortida.png",
         alt: "Colar artesanal em barro com folhas sortidas",
       },
     ],
@@ -156,11 +156,11 @@ export const products = [
     badges: [],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/mobile/mobile-em-barro.png",
+        src: "/images/arte-em-barro/colares/mobile/mobile-em-barro.png",
         alt: "Móbile decorativo artesanal em barro",
       },
       {
-        src: "/public/images/arte-em-barro/colares/mobile/mobile-em-barro-sortido.png",
+        src: "/images/arte-em-barro/colares/mobile/mobile-em-barro-sortido.png",
         alt: "Móbile decorativo artesanal em barro sortido",
       },
     ],
@@ -180,7 +180,7 @@ export const products = [
     badges: ["destaque"],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/nossa senhora/colar-em-barro-nossa-senhora.png",
+        src: "/images/arte-em-barro/colares/nossa senhora/colar-em-barro-nossa-senhora.png",
         alt: "Colar artesanal em barro de Nossa Senhora",
       },
     ],
@@ -199,15 +199,15 @@ export const products = [
     badges: [],
     images: [
       {
-        src: "/public/images/arte-em-barro/colares/terço/terço-divino-em-barro.png",
+        src: "/images/arte-em-barro/colares/terço/terço-divino-em-barro.png",
         alt: "Terço Divino artesanal em barro",
       },
       {
-        src: "/public/images/arte-em-barro/colares/terço/terço-divino-branco-em-barro.png",
+        src: "/images/arte-em-barro/colares/terço/terço-divino-branco-em-barro.png",
         alt: "Terço Divino artesanal em barro branco",
       },
       {
-        src: "/public/images/arte-em-barro/colares/terço/terço-divino-sortido-em-barro.png",
+        src: "/images/arte-em-barro/colares/terço/terço-divino-sortido-em-barro.png",
         alt: "Terço Divino artesanal em barro sortido",
       },
     ],
@@ -305,7 +305,7 @@ export const products = [
     badges: [],
     images: [
       {
-        src: "/public/images/mesa-posta/prato-decorativo-off-white.png",
+        src: "/images/mesa-posta/prato-decorativo-off-white.png",
         alt: "Prato elegante sobre mesa posta",
       },
     ],
