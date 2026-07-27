@@ -36,7 +36,7 @@ export const products = [
     badges: ["frete-gratis"],
     images: [
       {
-        src: "images/images/arte-em-barro/barro/colar-em-barro-branco.png",
+        src: "/images/arte-em-barro/barro/colar-em-barro-branco.png",
         alt: "Colar decorativo artesanal em barro branco",
       },
       {
