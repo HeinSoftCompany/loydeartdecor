@@ -2,27 +2,98 @@ const placeholder = (seed) =>
   `https://images.unsplash.com/${seed}?auto=format&fit=crop&w=1200&q=80`;
 
 export const products = [
+  // Produto 1
   {
-    id: "p1",
-    title: "Andorinhas Decorativas de Parede",
-    slug: "andorinhas-decorativas-de-parede",
-    group: "arte-em-barro",
-    subcategory: "andorinhas",
-    description:
-      "Peça artesanal com acabamento rústico e presença marcante para composições autorais.",
-    priceCents: 28900,
-    oldPriceCents: 32900,
-    installments: { count: 12, valueCents: 2806 },
-    badges: ["frete-gratis"],
-    images: [
-      {
-        src: "/images/arte-em-barro/andorinhas/andorinhas.png",
-        alt: "Andorinhas decorativas artesanais em barro",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/escultura-em-barro-assinada",
+  id: "p1",
+  title: "Andorinhas Decorativas de Parede",
+  slug: "andorinhas-decorativas-de-parede",
+  group: "arte-em-barro",
+  subcategory: "andorinhas",
+
+  description:
+    "Peça artesanal com acabamento rústico e presença marcante para composições autorais.",
+
+  // Menor preço, usado como referência nos cards.
+  priceCents: 1500,
+
+  installments: {
+    count: 1,
+    valueCents: 1500,
   },
+
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/andorinhas/andorinhas.png",
+      alt: "Andorinhas decorativas artesanais em barro natural",
+    },
+  ],
+
+  variants: [
+    {
+      id: "andorinha-barro-natural-p",
+      sku: "AND-BAR-NAT-P",
+      label: "P",
+      type: "size",
+
+      attributes: {
+        finish: "Natural",
+        size: "P",
+      },
+
+      priceCents: 1500,
+
+      installments: {
+        count: 1,
+        valueCents: 1500,
+      },
+
+      yampiToken: "9D8AUO82YA",
+    },
+    {
+      id: "andorinha-barro-natural-m",
+      sku: "AND-BAR-NAT-M",
+      label: "M",
+      type: "size",
+
+      attributes: {
+        finish: "Natural",
+        size: "M",
+      },
+
+      priceCents: 2000,
+
+      installments: {
+        count: 2,
+        valueCents: 1000,
+      },
+
+      yampiToken: "DW9AQKBTDT",
+    },
+    {
+      id: "andorinha-barro-natural-g",
+      sku: "AND-BAR-NAT-G",
+      label: "G",
+      type: "size",
+
+      attributes: {
+        finish: "Natural",
+        size: "G",
+      },
+
+      priceCents: 2500,
+
+      installments: {
+        count: 2,
+        valueCents: 1250,
+      },
+
+      yampiToken: "C7FQWM5364",
+    },
+  ],
+},
+// Produto 2
   {
     id: "p2",
     title: "Colar em Barro Branco e Sortido",
@@ -33,7 +104,7 @@ export const products = [
       "Conjunto com acabamento delicado para composições em parede com ar leve e sofisticado.",
     priceCents: 15900,
     installments: { count: 10, valueCents: 1590 },
-    badges: ["frete-gratis"],
+    badges: ["destaque"],
     images: [
       {
         src: "/images/arte-em-barro/barro/colar-em-barro-branco.png",
@@ -47,6 +118,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/andorinhas-decorativas-de-parede",
   },
+  //Produto 3
   {
     id: "p3",
     title: "Casinha Decorativa em Barro",
@@ -57,7 +129,7 @@ export const products = [
       "Peça de apoio para bandejas, aparadores e composição de mesas de centro.",
     priceCents: 9900,
     installments: { count: 6, valueCents: 1650 },
-    badges: ["frete-gratis"],
+    badges: ["destaque"],
     images: [
       {
         src: "/images/arte-em-barro/casinha/casinha-arte-em-barro.png",
@@ -75,6 +147,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/colar-decorativo-em-ceramica",
   },
+  //Produto 4
   {
     id: "p4",
     title: "Colar em Barro com Cruz",
@@ -95,30 +168,58 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/pinha-artesanal-terracota",
   },
+  // Produto 5
   {
-    id: "p5",
-    title: "Colar Arte em Barro Divino",
-    slug: "colar-arte-em-barro-divino",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description:
-      "Peça regional de forte identidade cultural, ideal para ambientes com personalidade.",
-    priceCents: 35000,
-    installments: { count: 12, valueCents: 3394 },
-    badges: ["frete-gratis"],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino.png",
-        alt: "Colar artesanal em barro com representação do Divino",
+  id: "p5",
+  title: "Colar Arte em Barro Divino",
+  slug: "colar-arte-em-barro-divino",
+  group: "arte-em-barro",
+  subcategory: "colares",
+  description:
+    "Peça regional de forte identidade cultural, ideal para ambientes com personalidade.",
+  priceCents: 35000,
+  installments: { count: 12, valueCents: 3394 },
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino.png",
+      alt: "Colar artesanal em barro Divino na cor branca",
+    },
+    {
+      src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino-sortido.png",
+      alt: "Colar artesanal em barro Divino em cores sortidas",
+    },
+  ],
+
+  variants: [
+    {
+      id: "colar-barro-divino-branco",
+      sku: "COL-BAR-DIV-001",
+      label: "Branco",
+      type: "finish",
+
+      attributes: {
+        finish: "Branco",
       },
-      {
-        src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino-sortido.png",
-        alt: "Colar artesanal em barro Divino em cores sortidas",
+
+      yampiToken: "CJIZ4FLK65",
+    },
+    {
+      id: "colar-barro-divino-sortido",
+      sku: "COL-BAR-DIV-002",
+      label: "Sortido",
+      type: "finish",
+
+      attributes: {
+        finish: "Sortido",
       },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/leao-do-norte-em-barro",
-  },
+
+      yampiToken: "GUE7NPFALT",
+    },
+  ],
+},
+  // Produto 6
   {
     id: "p6",
     title: "Colar em Barro Folha",
@@ -129,7 +230,7 @@ export const products = [
       "Vaso de linhas limpas com acabamento fosco para composição contemporânea.",
     priceCents: 17000,
     installments: { count: 12, valueCents: 1745 },
-    badges: ["frete-gratis"],
+    badges: ["destaque"],
     images: [
       {
         src: "/images/arte-em-barro/colares/folha/colar-em-barro-folha-branca.png",
@@ -143,6 +244,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/vaso-ceramico-minimalista",
   },
+  // Produto 7
   {
     id: "p7",
     title: "Móbile Artesanal em Barro",
@@ -167,6 +269,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/garrafa-termica-elegance",
   },
+  // Produto 8
   {
     id: "p8",
     title: "Colar em Barro Nossa Senhora",
@@ -187,6 +290,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/jogo-de-talheres-dourados",
   },
+  // Produto 9
   {
     id: "p9",
     title: "Terço Divino em Barro",
@@ -214,6 +318,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/pano-de-prato-bordado",
   },
+  // Produto 10
   {
     id: "p10",
     title: "Copo de Vidro Texturizado",
@@ -234,6 +339,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/copo-de-vidro-texturizado",
   },
+  // Produto 11
   {
     id: "p11",
     title: "Organizador de Bancada",
@@ -254,6 +360,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/organizador-de-bancada",
   },
+  // Produto 12
   {
     id: "p12",
     title: "Americano Trançado",
@@ -273,6 +380,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/americano-trancado",
   },
+  // produto 13
   {
     id: "p13",
     title: "Sousplat Rústico Chic",
@@ -293,6 +401,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/sousplat-rustico-chic",
   },
+  // Produto 14
   {
     id: "p14",
     title: "Prato Decorativo Off White",
@@ -312,6 +421,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/prato-decorativo-off-white",
   },
+  // Produto 15
   {
     id: "p15",
     title: "Tapeçaria Artesanal de Parede",
@@ -322,7 +432,7 @@ export const products = [
       "Peça de destaque para paredes com textura e identidade visual marcante.",
     priceCents: 21900,
     installments: { count: 10, valueCents: 2190 },
-    badges: ["frete-gratis"],
+    badges: ["destaque"],
     images: [
       {
         src: placeholder("photo-1505693416388-ac5ce068fe85"),
@@ -332,6 +442,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/tapecaria-artesanal-de-parede",
   },
+  // Produto 16
   {
     id: "p16",
     title: "Manta Decorativa Soft",
@@ -351,6 +462,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/manta-decorativa-soft",
   },
+  // Produto 17
   {
     id: "p17",
     title: "Capa de Almofada Terracota",
@@ -370,6 +482,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/capa-de-almofada-terracota",
   },
+  // Produto 18
   {
     id: "p18",
     title: "Escultura Decorativa Abstrata",
@@ -380,7 +493,7 @@ export const products = [
       "Objeto escultural para aparadores, estantes e mesas laterais.",
     priceCents: 25000,
     installments: { count: 12, valueCents: 2566 },
-    badges: ["frete-gratis"],
+    badges: ["destaque"],
     images: [
       {
         src: placeholder("photo-1618221195710-dd6b41faaea6"),
@@ -390,6 +503,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/escultura-decorativa-abstrata",
   },
+  // Produto 19
   {
     id: "p19",
     title: "Kit Livros Decorativos",
@@ -410,6 +524,7 @@ export const products = [
     yampiLink:
       "https://checkout.exemplo-yampi.com.br/produto/kit-livros-decorativos",
   },
+  // Produto 20
   {
     id: "p20",
     title: "Porta-Retrato Clássico",
