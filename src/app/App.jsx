@@ -5,7 +5,7 @@ import Footer from '../components/layout/Footer/Footer.jsx';
 import MobileBottomNav from '../components/navigation/MobileBottomNav/MobileBottomNav.jsx';
 import MobileCategorySheet from '../components/navigation/MobileCategorySheet/MobileCategorySheet.jsx';
 import CartDrawer from '../components/cart/CartDrawer/CartDrawer.jsx';
-import WhatsAppFloatingButton from '../components/contact/WhatsAppFloatingButton/WhatsAppFloatingButton.jsx';
+import WhatsAppFloatingButton from '../components/contact/WhatsappFloatingButton/WhatsappFloatingButton.jsx';
 import WhatsappContact from "../components/contact/WhatsappContact/WhatsappContact.jsx";
 import { navigationGroups } from '../data/navigation.js';
 
@@ -55,6 +55,7 @@ export default function App() {
       />
 
       <CartDrawer />
+      <WhatsAppFloatingButton />
       <WhatsappContact />
     </div>
   );
