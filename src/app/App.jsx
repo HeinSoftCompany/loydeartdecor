@@ -55,7 +55,6 @@ export default function App() {
       />
 
       <CartDrawer />
-      <WhatsAppFloatingButton />
       <WhatsappContact />
     </div>
   );
