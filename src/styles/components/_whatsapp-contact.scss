@@ -1,0 +1,109 @@
+.whatsapp-contact {
+  position: fixed;
+  right: 24px;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 50;
+
+  width: 60px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.24),
+    0 4px 12px rgba(37, 211, 102, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    background: #1fbd59;
+    color: #fff;
+
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+      0 15px 34px rgba(0, 0, 0, 0.28),
+      0 6px 16px rgba(37, 211, 102, 0.34);
+
+    .whatsapp-contact__tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) translateX(0);
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+}
+
+.whatsapp-contact__tooltip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 12px);
+
+  min-width: max-content;
+  padding: 8px 12px;
+
+  border-radius: 7px;
+  background: #222;
+  color: #fff;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(-50%) translateX(6px);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 100%;
+
+    border: 6px solid transparent;
+    border-left-color: #222;
+
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .whatsapp-contact {
+    right: 16px;
+    bottom: calc(90px + env(safe-area-inset-bottom));
+
+    width: 56px;
+    height: 56px;
+  }
+
+  .whatsapp-contact__tooltip {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-contact,
+  .whatsapp-contact__tooltip {
+    transition: none;
+  }
+}

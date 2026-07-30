@@ -5,6 +5,7 @@ import Container from "../../components/ui/Container/Container.jsx";
 import ProductGallery from "../../components/product/ProductGallery/ProductGallery.jsx";
 
 import { useCart } from "../../context/CartContext.jsx";
+import { buildWhatsAppUrl } from "../../utils/whatsapp.js";
 import { findProductBySlug } from "../../data/products.js";
 
 import { getProductPriceRange } from "../../utils/productPricing.js";
@@ -162,6 +163,35 @@ export default function ProductPage() {
       return null;
     }
   }, [product, selectedYampiToken, quantity]);
+
+  const productWhatsAppUrl = useMemo(() => {
+    if (!product) {
+      return null;
+    }
+
+    const selectedOptions = selectedVariant?.attributes ?? selectedAttributes;
+
+    const optionLines = Object.entries(selectedOptions)
+      .filter(([, value]) => Boolean(value))
+      .map(
+        ([attributeName, value]) =>
+          `${getAttributeLabel(attributeName)}: ${value}`,
+      );
+
+    const productUrl = `${window.location.origin}/produto/${product.slug}`;
+
+    const message = [
+      "Olá! Tenho interesse neste produto:",
+      "",
+      `*${product.title}*`,
+      ...optionLines,
+      `Quantidade: ${quantity}`,
+      "",
+      `Link do produto: ${productUrl}`,
+    ].join("\n");
+
+    return buildWhatsAppUrl(message);
+  }, [product, selectedVariant, selectedAttributes, quantity]);
 
   if (!product) {
     return <Navigate to="/nao-encontrado" replace />;
@@ -372,6 +402,17 @@ export default function ProductPage() {
                   Comprar agora
                 </button>
               )}
+
+              {productWhatsAppUrl ? (
+                <a
+                  className="btn btn--whatsapp"
+                  href={productWhatsAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Dúvidas sobre o produto
+                </a>
+              ) : null}
             </div>
 
             <ul className="product-page__benefits">
