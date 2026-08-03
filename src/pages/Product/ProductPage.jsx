@@ -29,6 +29,9 @@ function getAttributeLabel(attributeName) {
     case "size":
       return "Tamanho";
 
+    case "model":
+      return "Modelo";
+
     default:
       return "Opção";
   }

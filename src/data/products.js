@@ -95,99 +95,453 @@ export const products = [
 },
 // Produto 2
   {
-    id: "p2",
-    title: "Colar em Barro Branco e Sortido",
-    slug: "colar-em-barro-branco-e-sortido",
-    group: "arte-em-barro",
-    subcategory: "barro",
-    description:
-      "Conjunto com acabamento delicado para composições em parede com ar leve e sofisticado.",
-    priceCents: 15900,
-    installments: { count: 10, valueCents: 1590 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: "/images/arte-em-barro/barro/colar-em-barro-branco.png",
-        alt: "Colar decorativo artesanal em barro branco",
+  id: "p2",
+  title: "Colar em Barro",
+  slug: "colar-em-barro",
+  group: "arte-em-barro",
+  subcategory: "barro",
+  description:
+    "Conjunto com acabamento delicado para composições em parede com ar leve e sofisticado.",
+
+  priceCents: 4000,
+  installments: { count: 10, valueCents: 1590 },
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/barro/colar-barro-branco.png",
+      alt: "Colar decorativo artesanal em barro branco",
+    },
+    {
+      src: "/images/arte-em-barro/colares/barro/colar-barro-sortido.png",
+      alt: "Colar decorativo artesanal em barro sortido",
+    },
+  ],
+
+  variants: [
+    {
+      id: "colar-em-barro-branco",
+      sku: "COL-BAR-NAT-001",
+      label: "Branco",
+      type: "finish",
+
+      attributes: {
+        finish: "Branco",
       },
-      {
-        src: "/images/arte-em-barro/barro/colar-em-barro-sortido.png",
-        alt: "Colar decorativo artesanal em barro sortido",
+
+      yampiProductId: 301527863,
+      yampiToken: "L0QYV8ABL8",
+    },
+    {
+      id: "colar-em-barro-sortido",
+      sku: "COL-BAR-NAT-002",
+      label: "Sortido",
+      type: "finish",
+
+      attributes: {
+        finish: "Sortido",
       },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/andorinhas-decorativas-de-parede",
+
+      yampiProductId: 301527864,
+      yampiToken: "G7G122SFMW",
+    },
+  ],
+},
+// Produto 3
+{
+  id: "p3",
+  title: "Casinha Decorativa em Barro",
+  slug: "casinha-decorativa-em-barro",
+  group: "arte-em-barro",
+  subcategory: "casinha",
+
+  description:
+    "Peça de apoio para bandejas, aparadores e composição de mesas de centro.",
+
+  priceCents: 4000,
+
+  installments: {
+    count: 1,
+    valueCents: 4000,
   },
-  //Produto 3
-  {
-    id: "p3",
-    title: "Casinha Decorativa em Barro",
-    slug: "casinha-decorativa-em-barro",
-    group: "arte-em-barro",
-    subcategory: "casinha",
-    description:
-      "Peça de apoio para bandejas, aparadores e composição de mesas de centro.",
-    priceCents: 9900,
-    installments: { count: 6, valueCents: 1650 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro.png",
-        alt: "Casinha decorativa artesanal em barro",
+
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/casinha/casinha-em-barro.png",
+      alt: "Casinha decorativa artesanal em barro modelo 1",
+    },
+    {
+      src: "/images/arte-em-barro/casinha/casinha-em-barro1.png",
+      alt: "Casinha decorativa artesanal em barro modelo 2",
+    },
+    {
+      src: "/images/arte-em-barro/casinha/casinha-em-barro2.png",
+      alt: "Casinha decorativa artesanal em barro modelo 3",
+    },
+  ],
+
+  variants: [
+    {
+      id: "casinha-arte-em-barro-modelo-1",
+      sku: "CAS-BAR-NAT-001",
+      label: "Modelo 1",
+      type: "model",
+
+      attributes: {
+        model: "Modelo 1",
       },
-      {
-        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro-1.png",
-        alt: "Casinha artesanal em barro vista em outro ângulo",
+
+      priceCents: 4000,
+
+      installments: {
+        count: 1,
+        valueCents: 4000,
       },
-      {
-        src: "/images/arte-em-barro/casinha/casinha-arte-em-barro-2.png",
-        alt: "Detalhes da casinha decorativa artesanal em barro",
+
+      yampiProductId: 301293261,
+      yampiToken: "2RS1Y58E8O",
+    },
+    {
+      id: "casinha-arte-em-barro-modelo-2",
+      sku: "CAS-BAR-NAT-002",
+      label: "Modelo 2",
+      type: "model",
+
+      attributes: {
+        model: "Modelo 2",
       },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/colar-decorativo-em-ceramica",
-  },
-  //Produto 4
-  {
-    id: "p4",
-    title: "Colar em Barro com Cruz",
-    slug: "colar-em-barro-com-cruz",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description:
-      "Elemento decorativo com textura manual e visual orgânico para estantes e nichos.",
-    priceCents: 12900,
-    installments: { count: 8, valueCents: 1613 },
-    badges: ["novo"],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/cruz/colar-em-barro-cruz.png",
-        alt: "Colar decorativo artesanal em barro com cruz",
+
+      priceCents: 4000,
+
+      installments: {
+        count: 1,
+        valueCents: 4000,
       },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/pinha-artesanal-terracota",
-  },
-  // Produto 5
-  {
+
+      yampiProductId: 301526798,
+      yampiToken: "RQD3ZF0ARP",
+    },
+    {
+      id: "casinha-arte-em-barro-modelo-3",
+      sku: "CAS-BAR-NAT-003",
+      label: "Modelo 3",
+      type: "model",
+
+      attributes: {
+        model: "Modelo 3",
+      },
+
+      priceCents: 4000,
+
+      installments: {
+        count: 1,
+        valueCents: 4000,
+      },
+
+      yampiProductId: 301527132,
+      yampiToken: "3GTSH4HDDD",
+    },
+  ],
+},
+// Produto 4
+{
+  id: "p4",
+  title: "Colar em Barro com Cruz",
+  slug: "colar-em-barro-com-cruz",
+  group: "arte-em-barro",
+  subcategory: "colares",
+  description:
+    "Elemento decorativo com textura manual e visual orgânico para estantes e nichos.",
+
+  priceCents: 4000,
+  installments: { count: 1, valueCents: 4000 },
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/cruz/colar-cruz.png",
+      alt: "Colar decorativo artesanal em barro com cruz",
+    },
+  ],
+
+  sku: "COL-BAR-CRUZ-001",
+  yampiProductId: 301527954,
+  yampiToken: "IYTUBDNSPW",
+},
+// Produto 5
+{
   id: "p5",
+  title: "Colar em Barro Folha",
+  slug: "colar-em-barro-folha",
+  group: "arte-em-barro",
+  subcategory: "colares",
+  description:
+    "Vaso de linhas limpas com acabamento fosco para composição contemporânea.",
+
+  priceCents: 4000,
+  installments: { count: 1, valueCents: 4000 },
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/folha/colar-folha-branca.png",
+      alt: "Colar artesanal em barro com folha branca",
+    },
+    {
+      src: "public/images/arte-em-barro/colares/folha/colar-folha-sortida.png",
+      alt: "Colar artesanal em barro com folhas sortidas",
+    },
+  ],
+
+  variants: [
+    {
+      id: "colar-barro-folha-branco",
+      sku: "COL-BAR-FOL-001",
+      label: "Branco",
+      type: "finish",
+
+      attributes: {
+        finish: "Branco",
+      },
+
+      yampiProductId: 301528573,
+      yampiToken: "MNA80TFNB7",
+    },
+    {
+      id: "colar-barro-folha-sortido",
+      sku: "COL-BAR-FOL-002",
+      label: "Sortido",
+      type: "finish",
+
+      attributes: {
+        finish: "Sortido",
+      },
+
+      yampiProductId: 301528574,
+      yampiToken: "ELP1TAH181",
+    },
+  ],
+},
+//Produto 6
+// Produto 6
+{
+  id: "p6",
+  title: "Móbile Artesanal em Barro",
+  slug: "mobile-artesanal-em-barro",
+  group: "arte-em-barro",
+  subcategory: "colares",
+
+  description:
+    "Móbile artesanal em barro para decoração de paredes e ambientes com estilo natural e acolhedor.",
+
+  priceCents: 12500,
+
+  installments: {
+    count: 1,
+    valueCents: 12500,
+  },
+
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/mobile/mobile-barro.png",
+      alt: "Móbile artesanal em barro branco",
+    },
+    {
+      src: "/images/arte-em-barro/mobile/mobile-barro-sortido.png",
+      alt: "Móbile artesanal em barro sortido",
+    },
+  ],
+
+  variants: [
+    {
+      id: "mobile-em-barro-branco",
+      sku: "MOB-BAR-NAT-001",
+      label: "Branco",
+      type: "finish",
+
+      attributes: {
+        finish: "Branco",
+      },
+
+      priceCents: 12500,
+
+      installments: {
+        count: 1,
+        valueCents: 12500,
+      },
+
+      yampiProductId: 301653770,
+      yampiToken: "IQZP9S33JI",
+    },
+    {
+      id: "mobile-em-barro-sortido",
+      sku: "MOB-BAR-NAT-002",
+      label: "Sortido",
+      type: "finish",
+
+      attributes: {
+        finish: "Sortido",
+      },
+
+      priceCents: 12500,
+
+      installments: {
+        count: 1,
+        valueCents: 12500,
+      },
+
+      yampiProductId: 301653771,
+      yampiToken: "TKKP00ECL3",
+    },
+  ],
+},
+// Produto 7
+{
+  id: "p7",
+  title: "Colar em Barro Nossa Senhora",
+  slug: "colar-em-barro-nossa-senhora",
+  group: "arte-em-barro",
+  subcategory: "colares",
+  description:
+    "Conjunto refinado para composições de mesa com acabamento premium.",
+
+  priceCents: 4000,
+  installments: { count: 12, valueCents: 2419 },
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/nossa senhora/colar-nossa-senhora.png",
+      alt: "Colar artesanal em barro de Nossa Senhora",
+    },
+  ],
+
+  sku: "COL-BAR-NSA-001",
+  yampiProductId: 301528232,
+  yampiToken: "ORLLVIRDRL",
+},
+// Produto 8
+{
+  id: "p8",
+  title: "Terço Divino em Barro",
+  slug: "terco-divino-em-barro",
+  group: "arte-em-barro",
+  subcategory: "colares",
+
+  description:
+    "Terço artesanal em barro para decoração de paredes, altares, aparadores e ambientes religiosos.",
+
+  priceCents: 24000,
+
+  installments: {
+    count: 1,
+    valueCents: 24000,
+  },
+
+  badges: ["destaque"],
+
+  images: [
+    {
+      src: "/images/arte-em-barro/colares/terço/terço-divino-barro.png",
+      alt: "Terço Divino artesanal em barro natural",
+    },
+    {
+      src: "/images/arte-em-barro/colares/terço/terço-divino-branco.png",
+      alt: "Terço Divino artesanal em barro branco",
+    },
+    {
+      src: "public/images/arte-em-barro/colares/terço/terço-divino-sortido.png",
+      alt: "Terço Divino artesanal em barro sortido",
+    },
+  ],
+
+  variants: [
+    {
+      id: "terco-divino-em-barro-branco",
+      sku: "TER-BAR-DIV-001",
+      label: "Branco",
+      type: "finish",
+
+      attributes: {
+        finish: "Branco",
+      },
+
+      priceCents: 24000,
+
+      installments: {
+        count: 1,
+        valueCents: 24000,
+      },
+
+      yampiProductId: 301652922,
+      yampiToken: "NBEGHO2PJF",
+    },
+    {
+      id: "terco-divino-em-barro-sortido",
+      sku: "TER-BAR-DIV-002",
+      label: "Sortido",
+      type: "finish",
+
+      attributes: {
+        finish: "Sortido",
+      },
+
+      priceCents: 24000,
+
+      installments: {
+        count: 1,
+        valueCents: 24000,
+      },
+
+      yampiProductId: 301652929,
+      yampiToken: "JWBSNPQDHW",
+    },
+    {
+      id: "terco-divino-em-barro-natural",
+      sku: "TER-BAR-DIV-003",
+      label: "Natural",
+      type: "finish",
+
+      attributes: {
+        finish: "Natural",
+      },
+
+      priceCents: 24000,
+
+      installments: {
+        count: 1,
+        valueCents: 24000,
+      },
+
+      yampiProductId: 301652926,
+      yampiToken: "286TZBH08Y",
+    },
+  ],
+},
+// Produto 9
+{
+  id: "p9",
   title: "Colar Arte em Barro Divino",
   slug: "colar-arte-em-barro-divino",
   group: "arte-em-barro",
   subcategory: "colares",
   description:
     "Peça regional de forte identidade cultural, ideal para ambientes com personalidade.",
-  priceCents: 35000,
-  installments: { count: 12, valueCents: 3394 },
+  priceCents: 4000,
+  installments: { count: 1, valueCents: 4000 },
   badges: ["destaque"],
 
   images: [
     {
-      src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino.png",
+      src: "/images/arte-em-barro/colares/divino/colar-divino.png",
       alt: "Colar artesanal em barro Divino na cor branca",
     },
     {
-      src: "/images/arte-em-barro/colares/divino/colar-arte-em-barro-divino-sortido.png",
+      src: "/images/arte-em-barro/colares/divino/colar-divino-sortido.png",
       alt: "Colar artesanal em barro Divino em cores sortidas",
     },
   ],
@@ -203,6 +557,7 @@ export const products = [
         finish: "Branco",
       },
 
+      yampiProductId: 301652204,
       yampiToken: "CJIZ4FLK65",
     },
     {
@@ -215,336 +570,11 @@ export const products = [
         finish: "Sortido",
       },
 
+      yampiProductId: 301652205,
       yampiToken: "GUE7NPFALT",
     },
   ],
-},
-  // Produto 6
-  {
-    id: "p6",
-    title: "Colar em Barro Folha",
-    slug: "colar-em-barro-folha",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description:
-      "Vaso de linhas limpas com acabamento fosco para composição contemporânea.",
-    priceCents: 17000,
-    installments: { count: 12, valueCents: 1745 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/folha/colar-em-barro-folha-branca.png",
-        alt: "Colar artesanal em barro com folha branca",
-      },
-      {
-        src: "/images/arte-em-barro/colares/folha/colar-em-barro-folha-sortida.png",
-        alt: "Colar artesanal em barro com folhas sortidas",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/vaso-ceramico-minimalista",
-  },
-  // Produto 7
-  {
-    id: "p7",
-    title: "Móbile Artesanal em Barro",
-    slug: "mobile-artesanal-em-barro",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description:
-      "Design sofisticado para servir com praticidade em cafés e recepções.",
-    priceCents: 19900,
-    installments: { count: 10, valueCents: 1990 },
-    badges: [],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/mobile/mobile-em-barro.png",
-        alt: "Móbile decorativo artesanal em barro",
-      },
-      {
-        src: "/images/arte-em-barro/colares/mobile/mobile-em-barro-sortido.png",
-        alt: "Móbile decorativo artesanal em barro sortido",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/garrafa-termica-elegance",
-  },
-  // Produto 8
-  {
-    id: "p8",
-    title: "Colar em Barro Nossa Senhora",
-    slug: "colar-em-barro-nossa-senhora",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description:
-      "Conjunto refinado para composições de mesa com acabamento premium.",
-    priceCents: 24900,
-    installments: { count: 12, valueCents: 2419 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/nossa senhora/colar-em-barro-nossa-senhora.png",
-        alt: "Colar artesanal em barro de Nossa Senhora",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/jogo-de-talheres-dourados",
-  },
-  // Produto 9
-  {
-    id: "p9",
-    title: "Terço Divino em Barro",
-    slug: "terco-divino-em-barro",
-    group: "arte-em-barro",
-    subcategory: "colares",
-    description: "Peça em tecido com toque suave e acabamento bordado.",
-    priceCents: 4900,
-    installments: { count: 4, valueCents: 1225 },
-    badges: [],
-    images: [
-      {
-        src: "/images/arte-em-barro/colares/terço/terço-divino-em-barro.png",
-        alt: "Terço Divino artesanal em barro",
-      },
-      {
-        src: "/images/arte-em-barro/colares/terço/terço-divino-branco-em-barro.png",
-        alt: "Terço Divino artesanal em barro branco",
-      },
-      {
-        src: "/images/arte-em-barro/colares/terço/terço-divino-sortido-em-barro.png",
-        alt: "Terço Divino artesanal em barro sortido",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/pano-de-prato-bordado",
-  },
-  // Produto 10
-  {
-    id: "p10",
-    title: "Copo de Vidro Texturizado",
-    slug: "copo-de-vidro-texturizado",
-    group: "cozinha",
-    subcategory: "copos",
-    description:
-      "Modelo versátil com textura suave para uso diário ou receber convidados.",
-    priceCents: 6900,
-    installments: { count: 6, valueCents: 1150 },
-    badges: [],
-    images: [
-      {
-        src: placeholder("photo-1470337458703-46ad1756a187"),
-        alt: "Copos de vidro sobre bancada",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/copo-de-vidro-texturizado",
-  },
-  // Produto 11
-  {
-    id: "p11",
-    title: "Organizador de Bancada",
-    slug: "organizador-de-bancada",
-    group: "cozinha",
-    subcategory: "organizadores",
-    description:
-      "Solução prática e elegante para manter utensílios e acessórios no lugar.",
-    priceCents: 11900,
-    installments: { count: 8, valueCents: 1488 },
-    badges: ["novo"],
-    images: [
-      {
-        src: placeholder("photo-1489515217757-5fd1be406fef"),
-        alt: "Organizador em bancada de cozinha",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/organizador-de-bancada",
-  },
-  // Produto 12
-  {
-    id: "p12",
-    title: "Americano Trançado",
-    slug: "americano-trancado",
-    group: "mesa-posta",
-    subcategory: "americano",
-    description: "Base decorativa para uma mesa posta elegante e acolhedora.",
-    priceCents: 5900,
-    installments: { count: 5, valueCents: 1180 },
-    badges: [],
-    images: [
-      {
-        src: placeholder("photo-1495474472287-4d71bcdd2085"),
-        alt: "Mesa posta com americano trançado",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/americano-trancado",
-  },
-  // produto 13
-  {
-    id: "p13",
-    title: "Sousplat Rústico Chic",
-    slug: "sousplat-rustico-chic",
-    group: "mesa-posta",
-    subcategory: "sousplat",
-    description:
-      "Peça de base com visual artesanal para composições cheias de presença.",
-    priceCents: 7900,
-    installments: { count: 6, valueCents: 1317 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: placeholder("photo-1504754524776-8f4f37790ca0"),
-        alt: "Sousplat em composição de mesa",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/sousplat-rustico-chic",
-  },
-  // Produto 14
-  {
-    id: "p14",
-    title: "Prato Decorativo Off White",
-    slug: "prato-decorativo-off-white",
-    group: "mesa-posta",
-    subcategory: "pratos",
-    description: "Prato com acabamento delicado para compor mesas refinadas.",
-    priceCents: 8900,
-    installments: { count: 6, valueCents: 1484 },
-    badges: [],
-    images: [
-      {
-        src: "/images/mesa-posta/prato-decorativo-off-white.png",
-        alt: "Prato elegante sobre mesa posta",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/prato-decorativo-off-white",
-  },
-  // Produto 15
-  {
-    id: "p15",
-    title: "Tapeçaria Artesanal de Parede",
-    slug: "tapecaria-artesanal-de-parede",
-    group: "tecidos",
-    subcategory: "tapecaria",
-    description:
-      "Peça de destaque para paredes com textura e identidade visual marcante.",
-    priceCents: 21900,
-    installments: { count: 10, valueCents: 2190 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: placeholder("photo-1505693416388-ac5ce068fe85"),
-        alt: "Tapeçaria em parede de quarto",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/tapecaria-artesanal-de-parede",
-  },
-  // Produto 16
-  {
-    id: "p16",
-    title: "Manta Decorativa Soft",
-    slug: "manta-decorativa-soft",
-    group: "tecidos",
-    subcategory: "mantas",
-    description: "Manta com caimento leve para sofás, poltronas e camas.",
-    priceCents: 13900,
-    installments: { count: 8, valueCents: 1738 },
-    badges: [],
-    images: [
-      {
-        src: placeholder("photo-1505693416388-ac5ce068fe85"),
-        alt: "Manta decorativa sobre cama",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/manta-decorativa-soft",
-  },
-  // Produto 17
-  {
-    id: "p17",
-    title: "Capa de Almofada Terracota",
-    slug: "capa-de-almofada-terracota",
-    group: "tecidos",
-    subcategory: "capas",
-    description: "Capa versátil com textura suave e tom aconchegante.",
-    priceCents: 4500,
-    installments: { count: 4, valueCents: 1125 },
-    badges: [],
-    images: [
-      {
-        src: placeholder("photo-1505693416388-ac5ce068fe85"),
-        alt: "Almofadas em cama com tons neutros",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/capa-de-almofada-terracota",
-  },
-  // Produto 18
-  {
-    id: "p18",
-    title: "Escultura Decorativa Abstrata",
-    slug: "escultura-decorativa-abstrata",
-    group: "decoracao",
-    subcategory: "esculturas",
-    description:
-      "Objeto escultural para aparadores, estantes e mesas laterais.",
-    priceCents: 25000,
-    installments: { count: 12, valueCents: 2566 },
-    badges: ["destaque"],
-    images: [
-      {
-        src: placeholder("photo-1618221195710-dd6b41faaea6"),
-        alt: "Escultura decorativa em ambiente moderno",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/escultura-decorativa-abstrata",
-  },
-  // Produto 19
-  {
-    id: "p19",
-    title: "Kit Livros Decorativos",
-    slug: "kit-livros-decorativos",
-    group: "decoracao",
-    subcategory: "livros-decorativos",
-    description:
-      "Livro caixa e volumes decorativos para composições elegantes.",
-    priceCents: 14900,
-    installments: { count: 8, valueCents: 1863 },
-    badges: ["novo"],
-    images: [
-      {
-        src: placeholder("photo-1512820790803-83ca734da794"),
-        alt: "Livros decorativos sobre mesa",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/kit-livros-decorativos",
-  },
-  // Produto 20
-  {
-    id: "p20",
-    title: "Porta-Retrato Clássico",
-    slug: "porta-retrato-classico",
-    group: "decoracao",
-    subcategory: "porta-retratos",
-    description:
-      "Moldura sofisticada para fotos e memórias com acabamento premium.",
-    priceCents: 9900,
-    installments: { count: 6, valueCents: 1650 },
-    badges: [],
-    images: [
-      {
-        src: placeholder("photo-1510070009289-b5bc34383727"),
-        alt: "Porta-retrato sobre aparador",
-      },
-    ],
-    yampiLink:
-      "https://checkout.exemplo-yampi.com.br/produto/porta-retrato-classico",
-  },
+}
 ];
 
 export function findProductBySlug(productSlug) {
